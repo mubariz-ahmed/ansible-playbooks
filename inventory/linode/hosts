@@ -1,0 +1,2 @@
+[wireguard]
+debian-ca-central-001 ansible_host=172.105.104.143

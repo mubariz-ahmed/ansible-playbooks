@@ -1,0 +1,7 @@
+base_files:
+  - src: default.sh
+    dest: /etc/profile.d/default.sh
+  - src: vimrc.local
+    dest: /etc/vim/vimrc.local
+  - src: 20-disable-ipv6.conf
+    dest: /etc/sysctl.d/20-disable-ipv6.conf

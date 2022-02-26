@@ -1,0 +1,31 @@
+---
+- name: install deps
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - iptables-persistent
+      - grc
+      - vim
+      - net-tools
+      - sngrep
+      - ngrep
+      - tcpdump
+      - mlocate
+      - gnupg
+      - gnupg2
+      - ntp
+      - sudo
+      - rsync
+      - wget
+      - apt-transport-https
+
+- name: deploy other configs
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+    - "{{ base_files }}"

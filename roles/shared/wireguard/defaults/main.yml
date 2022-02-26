@@ -1,0 +1,6 @@
+---
+wg_port: 51821
+wg_addr: 10.8.0.1/24
+wg_priv_key: "6GH9TJwkW3fDXAdjiLeqEIqd3sU80pnQ5ZHamCm9qms="
+wg_pub_key: "NAv2MyPbP/+xfIlsEK6HNkH/phFZtNLqPzLvudnUKxY="
+wg_mubariz_key: "yAKtm7Pk95yiVSmRvASFHwo01M17zq+sgsmXUIWw1CY="

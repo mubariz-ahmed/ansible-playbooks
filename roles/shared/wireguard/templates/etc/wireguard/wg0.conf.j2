@@ -1,0 +1,12 @@
+
+[Interface]
+Address = {{ wg_addr }}
+SaveConfig = false
+ListenPort = {{ wg_port }}
+PrivateKey = {{ wg_priv_key }}
+PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o {{ ansible_default_ipv4['alias'] }} -j MASQUERADE
+PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o {{ ansible_default_ipv4['alias'] }} -j MASQUERADE
+
+[Peer]
+PublicKey = {{ wg_mubariz_key }}
+AllowedIPs = 10.8.0.2/32

@@ -1,0 +1,6 @@
+- name: apply wireguard configuration
+  hosts: wireguard
+  become: yes
+  roles:
+    - role: shared/wireguard
+      tags: ["wireguard"]

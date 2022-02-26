@@ -1,0 +1,2 @@
+[wireguard]
+debian-s-1vcpu-1gb-tor1-01 ansible_host=159.203.46.154
